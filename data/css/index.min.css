@@ -1,0 +1,120 @@
+body,
+html {
+    margin: 0;
+    page-break-after: 0
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-image: radial-gradient(#424141, #161616)
+}
+
+.slogan {
+    position: absolute;
+    width: 100%;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.letters {
+    text-align: center;
+    color: gray;
+    letter-spacing: .2em;
+    font-family: Oswald;
+    font-style: normal;
+    font-size: 3vw;
+    font-weight: 600
+}
+
+#logo {
+    position: absolute;
+    width: 100vw;
+    top: 30vh;    
+    left: 60%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%)
+}
+
+footer {
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 0;
+    padding-bottom: 1em
+}
+
+.love {
+    text-align: center;
+    color: #1e90ff;
+    letter-spacing: .1em;
+    font-family: KaushanScript;
+    font-style: normal;
+    font-size: 2vw;
+    font-weight: 200
+}
+
+@font-face {
+    font-family: Oswald;
+    src: url(../fonts/oswald.regular.ttf) format('truetype')
+}
+
+@font-face {
+    font-family: KaushanScript;
+    src: url(../fonts/KaushanScript-Regular.otf) format('opentype')
+}
+
+h1,
+h2,
+h3 {
+    text-align: center;
+    font-family: Oswald;
+    color: #696969;
+    letter-spacing: .2em
+}
+
+* {
+    margin: 0
+}
+
+body {
+    font: 200 16px/1 sans-serif
+}
+
+img {
+    width: 32.2%
+}
+
+#overlay {
+    position: fixed;
+    z-index: 99999;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, .9);
+    transition: 1s .4s
+}
+
+#progress {
+    height: 1px;
+    background: #fff;
+    position: absolute;
+    width: 0;
+    top: 50%
+}
+
+#progstat {
+    font-size: .7em;
+    letter-spacing: 3px;
+    position: absolute;
+    top: 50%;
+    margin-top: -40px;
+    width: 100%;
+    text-align: center;
+    color: #fff
+}

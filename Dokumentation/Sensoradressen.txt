@@ -1,0 +1,17 @@
+Sensoradressen
+
+***************************************************************
+Diese Adressen sind weltweit einmalig und entsprechen den
+Werten beim Autor dieses Repositories
+***************************************************************
+
+***************************************************************
+Ihre jeweiligen Adressen sind andere!
+***************************************************************
+
+281f4346d4e24e15 --> Rücklauf     --> devAddr[4] --> tempDev[4]
+286b7b46d41e1839 --> Vorlauf      --> devAddr[3] --> tempDev[3]
+28fd8946d4d52bd4 --> Warmwasser   --> devAddr[2] --> tempDev[2]
+28d09f46d4214b0f --> Puffer Unten --> devAddr[1] --> tempDev[1]
+28601b46d4647026 --> Puffer Mitte --> devAddr[0] --> tempDev[0]
+

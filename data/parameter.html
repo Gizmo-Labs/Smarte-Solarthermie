@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Solar Control Webserver</title>
+
+  <!-- Favicon file -->
+  <link rel="shortcut icon" type="png" href="./favicon.png">
+
+  <!-- Bootstrap CSS file -->
+  <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+
+  <!-- Main CSS file -->
+  <link rel="stylesheet" href="./css/status.min.css">
+
+  <script src="./js/getParameter.js"></script>
+</head>
+
+<body>
+  <nav class="navbar navbar-light navbar-expand-md navigation-clean">
+    <div class="container"><a class="navbar-brand" href="#"></a><button data-toggle="collapse" class="navbar-toggler"
+        data-target="#navcol-1"><span class="sr-only">Toggle
+          navigation</span><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navcol-1">
+        <ul class="nav justify-content-center navbar-nav m-auto">
+          <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="/edit">Dateien</a></li>
+          <li class="nav-item"><a class="nav-link" href="./status.html">Status</a></li>
+          <li class="nav-item"><a class="nav-link active" href="./parameter.html">Parameter</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <h2 class="mt-4"></h2>
+  <div class="row mb-2 text-center">
+    <div class="col-md-4 themed-grid-col">
+      <p>Parameter Kollektorfeld Ost</p>
+      <aside id="left">
+        <span>Max-Begrenzung Einschaltschwelle:</span>
+        <span>Max-Begrenzung Ausschaltschwelle:</span>
+        <span>Min-Begrenzung Einschaltschwelle:</span>
+        <span>Min-Begrenzung Ausschaltschwelle:</span>
+        <span>Differenz Einschaltschwelle:</span>
+        <span>Differenz Ausschaltschwelle:</span>
+        <span>Übertemperatur Einschaltschwelle:</span>
+        <span>Übertemperatur Ausschaltschwelle:</span>
+        <span>Frostschutz Einschaltschwelle:</span>
+        <span>Frostschutz Ausschaltschwelle:</span>
+        <span>Kühlfunktion Einschaltschwelle:</span>
+        <span>Kühlfunktion Freigabezeit:</span>
+        <span>Kühlfunktion Sperrzeit:</span>        
+      </aside>
+      <aside id="right">
+        <span id="Maximal Einschaltschwelle Ost">?</span>
+        <span id="Maximal Ausschaltschwelle Ost">?</span>
+        <span id="Minimal Einschaltschwelle Ost">?</span>
+        <span id="Minimal Ausschaltschwelle Ost">?</span>
+        <span id="Differenz Einschaltschwelle Ost">?</span>
+        <span id="Differenz Ausschaltschwelle Ost">?</span>
+        <span id="Übertemperatur Einschaltschwelle Ost">?</span>
+        <span id="Übertemperatur Ausschaltschwelle Ost">?</span>
+        <span id="Frostschutz Einschaltschwelle Ost">?</span>
+        <span id="Frostschutz Ausschaltschwelle Ost">?</span>
+        <span id="Kühlfunktion Einschaltschwelle Ost">?</span>
+        <span id="Kühlfunktion Freigabezeit Ost">?</span>
+        <span id="Kühlfunktion Sperrzeit Ost">?</span>
+      </aside>             
+    </div>
+
+    <div class="col-md-4 themed-grid-col">
+      <p>Parameter Kollektorfeld West</p>
+      <aside id="left">
+        <span>Max-Begrenzung Einschaltschwelle:</span>
+        <span>Max-Begrenzung Ausschaltschwelle:</span>
+        <span>Min-Begrenzung Einschaltschwelle:</span>
+        <span>Min-Begrenzung Ausschaltschwelle:</span>
+        <span>Differenz Einschaltschwelle:</span>
+        <span>Differenz Ausschaltschwelle:</span>
+        <span>Übertemperatur Einschaltschwelle:</span>
+        <span>Übertemperatur Ausschaltschwelle:</span>
+        <span>Frostschutz Einschaltschwelle:</span>
+        <span>Frostschutz Ausschaltschwelle:</span>
+        <span>Kühlfunktion Einschaltschwelle:</span>
+        <span>Kühlfunktion Freigabezeit:</span>
+        <span>Kühlfunktion Sperrzeit:</span>        
+      </aside>
+      <aside id="right">
+        <span id="Maximal Einschaltschwelle West">?</span>
+        <span id="Maximal Ausschaltschwelle West">?</span>
+        <span id="Minimal Einschaltschwelle West">?</span>
+        <span id="Minimal Ausschaltschwelle West">?</span>
+        <span id="Differenz Einschaltschwelle West">?</span>
+        <span id="Differenz Ausschaltschwelle West">?</span>
+        <span id="Übertemperatur Einschaltschwelle West">?</span>
+        <span id="Übertemperatur Ausschaltschwelle West">?</span>
+        <span id="Frostschutz Einschaltschwelle West">?</span>
+        <span id="Frostschutz Ausschaltschwelle West">?</span>
+        <span id="Kühlfunktion Einschaltschwelle West">?</span>
+        <span id="Kühlfunktion Freigabezeit West">?</span>
+        <span id="Kühlfunktion Sperrzeit West">?</span>
+      </aside>
+    </div>
+
+    <div class="col-md-4 themed-grid-col">
+      <p>Parameter Allgemein</p>
+      <aside id="left">
+        <span>Ventil Einschaltschwelle:</span>
+        <span>Ventil Ausschaltschwelle:</span>
+        <span>Ventil Freigabetemperatur:</span>
+        <span>Ladepumpe Einschaltschwelle:</span>
+        <span>Ladepumpe Ausschaltschwelle:</span>
+        <span>Ladepumpe Freigabetemperatur:</span>
+        <span>Ladepumpe Sensor oben:</span>
+        <span>Ladepumpe Sensor unten:</span>                
+      </aside>
+      <aside id="right">
+        <span id="Umschaltventil Einschaltschwelle">?</span>
+        <span id="Umschaltventil Ausschaltschwelle">?</span>
+        <span id="Umschaltventil Freigabetemperatur">?</span>
+        <span id="Umladepumpe Einschaltschwelle">?</span>
+        <span id="Umladepumpe Ausschaltschwelle">?</span>
+        <span id="Umladepumpe Freigabetemperatur">?</span>
+        <span id="Umladepumpe Sensor Schaltpunkt oben">?</span>
+        <span id="Umladepumpe Sensor Schaltpunkt unten">?</span>        
+      </aside>
+    </div>
+  </div>
+
+  <footer class="bg-info text-center text-lg-start fixed-bottom" <div class="col-auto">
+    <div id="button_row">
+      <button>Reconnect</button>
+      <button>Neustart</button>
+    </div>
+    </div>
+  </footer>
+
+  <script src="./js/jquery-3.7.1.min.js"></script>
+  <script src="./bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>

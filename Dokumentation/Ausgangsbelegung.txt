@@ -1,0 +1,14 @@
+Relaisausgänge:
+
+***************************************************************
+Dies sind die Ausgangsbelegungen der Relais-Treiberkarte
+***************************************************************
+
+output[0] --> Solarpumpe Ostseite
+output[1] --> Solarpumpe Westseite
+output[2] --> Umladepumpe Pufferspeicher
+output[3] --> Umschaltventil
+output[4] --> Reserve
+output[5] --> Reserve
+output[6] --> Reserve
+output[7] --> Reserve

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Solar Control Webserver</title>
+
+  <!-- Favicon file -->
+  <link rel="shortcut icon" type="png" href="./favicon.png">
+
+  <!-- Bootstrap CSS file -->
+  <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+
+  <!-- Main CSS file -->
+  <link rel="stylesheet" href="./css/status.min.css">
+
+  <script src="./js/getStatus.js"></script>
+</head>
+
+<body>
+  <nav class="navbar navbar-light navbar-expand-md navigation-clean">
+    <div class="container"><a class="navbar-brand" href="#"></a><button data-toggle="collapse" class="navbar-toggler"
+        data-target="#navcol-1"><span class="sr-only">Toggle
+          navigation</span><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navcol-1">
+        <ul class="nav justify-content-center navbar-nav m-auto">
+          <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="/edit">Dateien</a></li>
+          <li class="nav-item"><a class="nav-link active" href="./status.html">Status</a></li>
+          <li class="nav-item"><a class="nav-link" href="./parameter.html">Parameter</a></li>          
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <h2 class="mt-4"></h2>
+  <div class="row mb-3 text-center">
+    <div class="col-md-4 themed-grid-col">
+      <p>ESP32-S3</p>
+      <aside id="left">
+        <span>Laufzeit Gateway:</span>
+        <span>WLAN Signal:</span>
+        <span>Freier Speicher:</span>
+        <span>Chiptemperatur:</span>
+        <span>IPv4 Addresse:</span>
+        <span>Hostname:</span>
+        <span>SSID:</span>
+        <span>Gateway IP:</span>
+        <span>Kanal:</span>
+        <span>Mac-Addresse:</span>
+        <span>Subnet-Maske:</span>
+        <span>BSSID:</span>
+        <span>Client IP:</span>
+        <span>DnsIP:</span>
+      </aside>
+      <aside id="right">
+        <span>?</span>
+        <span>?</span>
+        <span>?</span>
+        <span>?</span>
+        <span>?</span>
+        <span>?</span>
+        <span>?</span>
+        <span>?</span>
+        <span>?</span>
+        <span>?</span>
+        <span>?</span>
+        <span>?</span>
+        <span>?</span>
+        <span>?</span>
+      </aside>
+    </div>
+
+    <div class="col-md-4 themed-grid-col">
+      <p>Solarthermie</p>
+      <aside id="left">
+        <span>Betriebsart:</span>
+        <span>Kollektor Ost:</span>
+        <span>Kollektor West:</span>
+        <span>Warmwassertemperatur:</span>
+        <span>Puffertemperatur Mitte:</span>
+        <span>Puffertemperatur Unten:</span>
+        <span>Vorlauftemperatur:</span>
+        <span>Rücklauftemperatur:</span>
+        <span>Solarpumpe Ostseite:</span>
+        <span>Solarpumpe Westseite:</span>
+        <span>Ladepumpe:</span>
+        <span>Umschaltventil:</span>
+      </aside>
+      <aside id="right">
+        <span id="Betriebsart">?</span>
+        <span id="KollOst">?</span>
+        <span id="KollWest">?</span>
+        <span id="Warmwasser">?</span>
+        <span id="PuMitte">?</span>
+        <span id="PuUnten">?</span>
+        <span id="Vorlauf">?</span>
+        <span id="Ruecklauf">?</span>
+        <span id="SolarpumpeOst">?</span>
+        <span id="SolarpumpeWest">?</span>
+        <span id="Ladepumpe">?</span>
+        <span id="Umschaltventil">?</span>
+      </aside>
+    </div>
+
+    <div class="col-md-3 themed-grid-col">
+      <p>Energiemessung</p>
+      <aside id="left">
+        <span>Spannung:</span>
+        <span>Strom:</span>
+        <span>Leistung:</span>
+        <span>Arbeit:</span>
+        <span>Wärmemenge:</span>
+      </aside>
+      <aside id="right">
+        <span id="Spannung">?</span>
+        <span id="Strom">?</span>
+        <span id="Leistung">?</span>
+        <span id="Arbeit">?</span>
+        <span id="Waerme">?</span>
+      </aside>
+    </div>
+  </div>
+
+  <footer class="bg-info text-center text-lg-start fixed-bottom" <div class="col-auto">
+    <div id="button_row">
+      <button>Reconnect</button>
+      <button>Neustart</button>
+    </div>
+    </div>
+  </footer>
+
+  <script src="./js/jquery-3.7.1.min.js"></script>
+  <script src="./bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>

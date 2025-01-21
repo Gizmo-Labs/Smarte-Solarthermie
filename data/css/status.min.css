@@ -1,0 +1,81 @@
+body,
+html {
+    margin: 0;
+    page-break-after: 0
+}
+
+body {    
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-repeat: no-repeat;
+}
+
+.navbar-light .navbar-brand {
+    color: white
+}
+
+#buttons {
+    position: absolute;
+    width: 50vw;
+    top: 35vh;
+    left: 80vw;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%)
+}
+
+#button_row {
+    padding: 10px;
+}
+
+button {
+    border-radius: 10px;
+    width: 15vw;
+    height: auto;
+    font-size: 1vw;
+    text-transform: uppercase;
+    background: 0 0;
+    background: lightcyan;
+    color: #333;
+    letter-spacing: .1em;
+    font-weight: 600;
+    border: none;
+    cursor: pointer
+}
+
+button:hover {
+    background: black;
+    color: darkcyan;
+}
+
+aside {
+    display: inline-flex;
+    flex-direction: column;
+}
+
+#left {
+    align-items: flex-end;
+    font-size: 12px;
+    font-family: Oswald;
+    color: darkcyan;
+    letter-spacing: .2em
+}
+
+#right {
+    align-items: flex-start;
+    font-size: 12px;
+    font-family: Oswald;
+    color: darkgoldenrod;
+    letter-spacing: .2em
+}
+
+@font-face {
+    font-family: Oswald;
+    src: url(../fonts/oswald.regular.ttf) format('truetype')
+}
+
+@font-face {
+    font-family: KaushanScript;
+    src: url(../fonts/KaushanScript-Regular.otf) format('opentype')
+}
